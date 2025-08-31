@@ -35,13 +35,13 @@
     }
     footer {
       text-align: center;
-      padding: 10px;
+      padding: 15px;
       background-color: #eee;
     }
     .btn {
       display: inline-block;
       margin-top: 5px;
-      padding: 10px 20px;
+      padding: 12px 24px;
       background-color: #b22222;
       color: white;
       text-decoration: none;
@@ -52,6 +52,28 @@
     .btn:hover {
       background-color: #8b1a1a;
     }
+
+    /* 🔹 Responsive: en pantallas pequeñas ocultar PDF */
+    @media (max-width: 768px) {
+      .viewer {
+        display: none;
+      }
+      footer {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      footer p {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .btn {
+        font-size: 18px;
+        padding: 14px 28px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -59,15 +81,15 @@
     🍴 Menú La Marquezita
   </header>
 
+  <!-- Versión escritorio: PDF embebido -->
   <div class="viewer">
-    <!-- Cambia el nombre si renombraste tu PDF -->
-    <embed src="MENU.pdf" type="application/pdf">
+    <embed src="menu.pdf" type="application/pdf">
   </div>
 
   <footer>
-    <p>¿No se ve el menú? Descárgalo aquí 👇</p>
-    <!-- El enlace apunta al PDF -->
-    <a class="btn" href="MENU.pdf" download>Descargar PDF</a>
+    <p>Descarga el menú en PDF:</p>
+    <a class="btn" href="menu.pdf" download>📥 Descargar Menú</a>
   </footer>
 </body>
 </html>
+
