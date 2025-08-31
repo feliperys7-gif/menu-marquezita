@@ -4,21 +4,70 @@
   <meta charset="UTF-8">
   <title>Menú La Marquezita</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background-color: #b22222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .viewer {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     embed {
-      width: 100%;
-      height: 100%;
-      border: none;
+      width: 90%;
+      height: 90%;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      background: white;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #eee;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 10px 20px;
+      background-color: #b22222;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+    .btn:hover {
+      background-color: #8b1a1a;
     }
   </style>
 </head>
 <body>
-  <!-- Asegúrate que el nombre aquí coincide con tu PDF en el repo -->
-  <embed src="MENÚ.pdf" type="application/pdf">
+  <header>
+    🍴 Menú La Marquezita
+  </header>
+
+  <div class="viewer">
+    <!-- Cambia el nombre si renombraste tu PDF -->
+    <embed src="menu.pdf" type="application/pdf">
+  </div>
+
+  <footer>
+    <p>¿No se ve el menú? Descárgalo aquí 👇</p>
+    <!-- El enlace apunta al PDF -->
+    <a class="btn" href="menu.pdf" download>Descargar PDF</a>
+  </footer>
 </body>
 </html>
